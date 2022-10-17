@@ -1,0 +1,91 @@
+.userDetails__container {
+  width: 100%;
+  height: 100%;
+
+  padding: 40px 20px;
+}
+
+.userDetails__backLink {
+  cursor: pointer;
+   display: flex;
+   column-gap: 10px;
+   align-items: center;
+
+   &--text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+   }
+}
+
+.userDetails__containerTwo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  &--text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #213F7D;
+  }
+}
+
+.userDetails__btnContainer {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.userDetails__DeleteBtn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #E4033B;
+  padding: 5px;
+  border: 1px solid #E4033B;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.userDetails__ActivateBtn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #39CDCC;
+  padding: 5px;
+  border: 1px solid #39CDCC;
+  border-radius: 8px;
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .userDetails__containerTwo {
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+  
+    align-items: center;
+
+    &--text {
+      align-self: flex-start;
+    }
+  
+  }
+}

@@ -1,0 +1,161 @@
+.privateRoute__container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 80px 1fr;
+  position: relative;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.privateRoute__header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.privateRoute__sidebar {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  background-color: white;
+
+  overflow-y: scroll;
+
+  height: 100%;
+}
+
+
+.privateRoute__sidebar::-webkit-scrollbar,
+.closeSideBar::-webkit-scrollbar,
+.openSideBar::-webkit-scrollbar,
+.privateRoute__someComponent::-webkit-scrollbar {
+  display: none;
+}
+
+.privateRoute__sidebar, .closeSideBar, .openSideBar, .privateRoute__someComponent {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.privateRoute__someComponent {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  overflow-y: scroll;
+
+}
+
+.closeSideBar,
+.openSideBar {
+  position: absolute;
+  width: 280px;
+  height: 100vh;
+  z-index: 10;
+
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  background-color: white;
+
+  overflow-y: scroll;
+}
+
+.openSideBar {
+  animation-name: openSideBar;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.closeSideBar {
+  z-index: 10;
+  animation-name: closeSideBar;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.initialClose {
+  display: none;
+}
+
+@keyframes openSideBar {
+  0% {
+    left: -280px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes closeSideBar {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: -280px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .privateRoute__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .privateRoute__someComponent {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .closeSideBar,
+  .openSideBar {
+    width: 80%;
+  }
+
+  @keyframes openSideBar {
+    0% {
+      left: -80%;
+    }
+
+    100% {
+      left: 0%;
+    }
+  }
+
+  @keyframes closeSideBar {
+    0% {
+      left: 0%;
+    }
+
+    100% {
+      left: -80%;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .closeSideBar,
+  .openSideBar {
+    width: 90%;
+  }
+
+  @keyframes openSideBar {
+    0% {
+      left: -90%;
+    }
+
+    100% {
+      left: 0%;
+    }
+  }
+
+  @keyframes closeSideBar {
+    0% {
+      left: 0%;
+    }
+
+    100% {
+      left: -90%;
+    }
+  }
+}

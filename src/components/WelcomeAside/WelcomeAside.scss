@@ -1,0 +1,46 @@
+.welcomeAside-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 50px 20px;
+
+
+  box-shadow: -32px -8px 37px -44px rgba(0,0,0,0.25) inset;
+  -webkit-box-shadow: -32px -8px 37px -44px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: -32px -8px 37px -44px rgba(0,0,0,0.25) inset;
+}
+
+.welcomeAside-containerTwo {
+  align-self: flex-start;
+
+
+  margin-left: 40px;
+  display: flex;
+  column-gap: 10px;
+  height: 60px;
+  align-items: center;
+}
+
+.aside-text {
+  color: #213F7D;
+  font-size: 35px;
+}
+
+.welcomeImage {
+  width: 90%;
+  height: 60%;
+
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 800px) {
+  .welcomeImage {
+    height: 90%;
+    width: 90%;
+  }
+}

@@ -1,0 +1,81 @@
+.sidebar__container {
+  height: 100%;
+  width: 100%;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+
+.sidebar__containerTwo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+
+  &--text {
+    color: #213F7D;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &--crossMark {
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.sidebar__navheader {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+
+  &--text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #213F7D;
+  }
+}
+
+.navItem__container {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+
+  &--text {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .1px;
+    line-height: 19px;
+
+    color: #9BA8C4;
+  }
+
+}
+
+
+.sidebar__nav-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+
+  &--header {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  
+    color: #545F7D;
+  }
+
+}
+
+.spaceDiv {
+  height: 50px;
+  background-color: white;
+  color: white;
+}
